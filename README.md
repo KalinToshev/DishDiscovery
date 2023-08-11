@@ -1,5 +1,7 @@
 # DishDiscovery
 
+![Logo of the app](logo-without-background.png)
+
 DishDiscovery is a Java web application that enables users to share, explore, and collaborate on delicious recipes.
 
 ## Features
