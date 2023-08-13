@@ -15,6 +15,7 @@ DishDiscovery is a Java web application that enables users to share, explore, an
 
 - Java
 - Spring Boot (Web, Security, Data JPA)
+- Thymeleaf
 - MySQL Database
 - Vanilla JavaScript
 - HTML5 and CSS3
