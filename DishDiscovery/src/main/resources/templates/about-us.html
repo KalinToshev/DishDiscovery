@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head th:replace="~{/fragments/commons::head}"></head>
+<body>
+  <nav th:replace="~{/fragments/commons::nav#guest-nav}"></nav>
+  <main>
+    <section class="about-us">
+      <div class="container">
+        <h2>About Us</h2>
+        <hr>
+        <p>Welcome to DishDiscovery, your ultimate destination for discovering and sharing delicious recipes from around the world. Our mission is to bring together food enthusiasts, home cooks, and culinary experts to create a vibrant community centered around culinary experiences.</p>
+        <p>At DishDiscovery, we believe that food has the power to connect people, cultures, and traditions. Whether you're a seasoned chef or just getting started in the kitchen, you'll find a variety of mouthwatering recipes to suit every palate.</p>
+        <p>Join our community today and embark on a culinary journey that celebrates the joy of cooking, sharing, and savoring delectable dishes. Happy cooking!</p>
+      </div>
+    </section>
+    <section class="social-media">
+      <div class="container">
+        <h2>Connect With Us</h2>
+        <div class="social-icons">
+          <a href="#" class="social-icon"><img src="/images/facebook.png" alt="Facebook"></a>
+          <a href="#" class="social-icon"><img src="/images/twitter.png" alt="Twitter"></a>
+          <a href="#" class="social-icon"><img src="/images/instagram.png" alt="Instagram"></a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer th:replace="~{/fragments/commons::footer}"></footer>
+</body>
+</html>

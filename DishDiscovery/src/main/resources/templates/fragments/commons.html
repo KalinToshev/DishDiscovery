@@ -7,8 +7,35 @@
   <title>DishDiscovery | share, explore, and collaborate on delicious recipes</title>
   <link rel="stylesheet" href="/css/typography.css">
   <link rel="stylesheet" href="/css/style.css">
+  <link rel="shortcut icon" href="/images/logo-without-background.png" type="image/x-icon">
 </head>
 <body>
-
+  <nav id="guest-nav">
+    <div class="logo-holder">
+      <img src="/images/logo-without-background.png" alt="Logo">
+    </div>
+    <ul>
+      <li>
+        <a th:href="@{/}">Home</a>
+      </li>
+      <li>
+        <a href="#">Sign Up</a>
+      </li>
+      <li>
+        <a href="#">Sign In</a>
+      </li>
+      <li>
+        <a th:href="@{/about-us}">About Us</a>
+      </li>
+    </ul>
+  </nav>
+  <footer class="footer">
+    <div class="footer-logo">
+      <img src="/images/logo-without-background.png" alt="Logo">
+    </div>
+    <div class="footer-content">
+      <p>&copy; 2023 DishDiscovery. All rights reserved.</p>
+    </div>
+  </footer>
 </body>
 </html>
