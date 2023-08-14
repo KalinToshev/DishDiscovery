@@ -15,7 +15,7 @@ public class SecurityConfig {
         httpSecurity
                 .authorizeHttpRequests((authorizeHttpRequests) -> authorizeHttpRequests
                         .requestMatchers(PathRequest.toStaticResources().atCommonLocations()).permitAll()
-                        .requestMatchers("/").anonymous()
+                        .requestMatchers("/", "/sign-up", "/sign-in").anonymous()
                         .requestMatchers("/about-us").permitAll()
                         .anyRequest().authenticated());
 
