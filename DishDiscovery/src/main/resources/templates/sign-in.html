@@ -3,6 +3,23 @@
 <head th:replace="~{/fragments/commons::head}"></head>
 <body>
   <nav th:replace="~{/fragments/commons::nav#guest-nav}"></nav>
+  <main>
+    <section class="signin">
+      <div class="container">
+        <h2>Sign In</h2>
+        <form th:action="@{/signin}" method="post">
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username" required>
+
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required>
+
+          <button type="submit">Sign In</button>
+        </form>
+        <p th:if="${param.error}" class="error-message">Invalid username or password.</p>
+      </div>
+    </section>
+  </main>
   <footer th:replace="~{/fragments/commons::footer}"></footer>
 </body>
 </html>

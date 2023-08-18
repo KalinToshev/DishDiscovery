@@ -215,6 +215,123 @@ MAIN
     transform: scale(1.1);
 }
 
+/* Style for the sign-up form */
+.signup {
+    text-align: center;
+    padding: 60px 0;
+}
+
+.signup h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.signup form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #f8f8f8;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.signup label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.signup input[type="text"],
+.signup input[type="password"],
+.signup input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.signup button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #A663CC;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.signup button:hover {
+    background-color: #6F2DBD;
+}
+
+/* Optional: Style for error messages */
+.error-message {
+    color: red;
+    margin-top: 10px;
+}
+
+/* Style for the sign-in form */
+.signin {
+    text-align: center;
+    padding: 60px 0;
+}
+
+.signin h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.signin form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #f8f8f8;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.signin label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.signin input[type="text"],
+.signin input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.signin button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.signin button:hover {
+    background-color: #0056b3;
+}
+
+/* Optional: Style for error messages */
+.error-message {
+    color: red;
+    margin-top: 10px;
+}
+
 /*
 ============================
 FOOTER
