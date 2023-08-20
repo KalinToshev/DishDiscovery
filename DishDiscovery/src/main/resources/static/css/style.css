@@ -269,9 +269,9 @@ MAIN
 }
 
 /* Optional: Style for error messages */
-.error-message {
+.signup .error-signup-message {
     color: red;
-    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 /* Style for the sign-in form */
@@ -329,7 +329,7 @@ MAIN
 /* Optional: Style for error messages */
 .error-message {
     color: red;
-    margin-top: 10px;
+    margin: 10px 0;
 }
 
 /*
