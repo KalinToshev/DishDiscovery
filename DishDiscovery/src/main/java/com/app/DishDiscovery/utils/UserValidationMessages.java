@@ -1,21 +1,21 @@
 package com.app.DishDiscovery.utils;
 
 public class UserValidationMessages {
-    public static final String USERNAME_PATTERN = "^(?=.*[A-Z])(?=.*[!@#$%^&*()_+{}\\[\\]:;<>,.?~\\\\/\\-]).{8,}$\n";
+    public static final String USERNAME_PATTERN = "^[a-zA-Z0-9_-]{8,}$";
 
     public static final String USERNAME_NOT_BLANK_MESSAGE = "Username is required!";
 
     public static final String USERNAME_SIZE_MESSAGE = "Username must be at least 8 characters long!";
 
-    public static final String USERNAME_PATTERN_MESSAGE = "Username must include an uppercase letter and a symbol!";
+    public static final String USERNAME_PATTERN_MESSAGE = "Username must include at least an uppercase letter and one digit!";
 
-    public static final String PASSWORD_PATTERN = "^(?=.*[A-Z])(?=.*[!@#$%^&*()_+{}\\[\\]:;<>,.?~\\\\/\\-]).{8,}$\n";
+    public static final String PASSWORD_PATTERN = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*?&])[A-Za-z\\d@$!%*?&]{8,}$";
 
     public static final String PASSWORD_NOT_BLANK_MESSAGE = "Password is required!";
 
     public static final String PASSWORD_SIZE_MESSAGE = "Password must be at least 8 characters long!";
 
-    public static final String PASSWORD_PATTERN_MESSAGE = "Password must include an uppercase letter and a symbol!";
+    public static final String PASSWORD_PATTERN_MESSAGE = "Password must include at least an uppercase letter, one digit and one symbol!";
 
     public static final String CONFIRM_PASSWORD_NOT_BLANK_MESSAGE = "Confirm Password is required!";
 
