@@ -1,10 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
+<head th:replace="~{/fragments/commons::head}"></head>
 <body>
-Home
+    <nav th:replace="~{/fragments/commons::nav#user-nav}"></nav>
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Welcome to DishDiscovery</h1>
+                <p>Discover and share delicious recipes from around the world.</p>
+                <a th:href="@{/add-recipe}" class="btn btn-primary">Add Recipe</a>
+            </div>
+        </section>
+
+        <section class="featured-recipes">
+            <div class="container">
+                <h2>List Of Recipes</h2>
+                <hr style="margin-bottom: 1rem;">
+                <div class="featured-recipes-flex-container">
+                    <div class="container">
+                        <div class="recipe-card">
+                            <img src="/images/pasta-carbonara.png" alt="Featured Recipe">
+                            <h3 class="recipe-title">Delicious Pasta Carbonara</h3>
+                            <p class="recipe-description">Indulge in this creamy pasta dish that's perfect for a cozy evening.</p>
+                            <a href="/recipes/1" class="btn btn-primary">View Recipe</a>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="recipe-card">
+                            <img src="/images/pasta-carbonara.png" alt="Featured Recipe">
+                            <h3 class="recipe-title">Delicious Pasta Carbonara</h3>
+                            <p class="recipe-description">Indulge in this creamy pasta dish that's perfect for a cozy evening.</p>
+                            <a href="/recipes/1" class="btn btn-primary">View Recipe</a>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="recipe-card">
+                            <img src="/images/pasta-carbonara.png" alt="Featured Recipe">
+                            <h3 class="recipe-title">Delicious Pasta Carbonara</h3>
+                            <p class="recipe-description">Indulge in this creamy pasta dish that's perfect for a cozy evening.</p>
+                            <a href="/recipes/1" class="btn btn-primary">View Recipe</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer th:replace="~{/fragments/commons::footer}"></footer>
 </body>
 </html>

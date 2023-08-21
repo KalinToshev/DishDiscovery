@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -26,6 +26,30 @@
       </li>
       <li>
         <a th:href="@{/about-us}">About Us</a>
+      </li>
+    </ul>
+  </nav>
+  <nav id="user-nav">
+    <div class="logo-holder">
+      <img src="/images/logo-without-background.png" alt="Logo">
+    </div>
+    <ul>
+      <li>
+        <a th:href="@{/home}">Home</a>
+      </li>
+      <li>
+        <a th:href="@{/profile}">Profile</a>
+      </li>
+      <li>
+        <a th:href="@{/add-recipe}">Add Recipe</a>
+      </li>
+      <li>
+        <a th:href="@{/about-us}">About Us</a>
+      </li>
+      <li>
+        <form th:action="@{/logout}" th:method="post">
+          <button>Sign Out</button>
+        </form>
       </li>
     </ul>
   </nav>

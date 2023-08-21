@@ -36,8 +36,23 @@ nav ul li a {
     color: black;
 }
 
+nav ul li form button {
+    background-color: transparent;
+    text-transform: uppercase;
+    font-size: 1em;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    color: black;
+}
+
 nav ul li:hover {
     background-color: #6F2DBD;
+}
+
+nav ul li:hover form button {
+    color: white;
 }
 
 nav ul li:hover a {
