@@ -347,6 +347,48 @@ MAIN
     margin: 10px 0;
 }
 
+#recipe-filters {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-bottom: 1px solid #ccc;
+}
+
+#recipe-filters h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+#recipe-filters form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+#recipe-filters label {
+    flex-basis: 100%;
+    font-weight: bold;
+}
+
+#recipe-filters select {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#recipe-filters button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#recipe-filters button:hover {
+    background-color: #0056b3;
+}
+
 /*
 ============================
 FOOTER
