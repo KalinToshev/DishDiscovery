@@ -1,6 +1,5 @@
 package com.app.DishDiscovery.models.entities;
 
-import com.app.DishDiscovery.models.enums.CategoryEnums;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;

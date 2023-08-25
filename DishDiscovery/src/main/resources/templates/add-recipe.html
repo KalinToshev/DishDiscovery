@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{/fragments/commons::head}"></head>
+<body>
+    <nav th:replace="~{/fragments/commons::nav#user-nav}"></nav>
+    <main>
+        <section class="add-recipe">
+            <h2>Add Recipe</h2>
+            <form th:action="@{/add-recipe}" th:method="POST" th:object="${addRecipeDTO}">
+                <label for="title">Title:</label>
+                <input id="title" name="title" required type="text" th:field="*{title}">
+
+                <label for="description">Description:</label>
+                <textarea id="description" name="description" required rows="4" th:field="*{description}"></textarea>
+
+                <label for="category">Category:</label>
+                <select id="category" name="category" required th:field="*{category}">
+                    <option value="All">All</option>
+                    <option value="Breakfast">Breakfast</option>
+                    <option value="Lunch">Lunch</option>
+                    <option value="Dinner">Dinner</option>
+                    <option value="Dessert">Dessert</option>
+                </select>
+
+                <label for="difficulty">Difficulty:</label>
+                <select id="difficulty" name="difficulty" th:field="*{difficulty}">
+                    <option value="All">All</option>
+                    <option value="Easy">Easy</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Hard">Hard</option>
+                </select>
+
+                <label for="image1Url">Image 1 URL:</label>
+                <input id="image1Url" name="image1Url" required type="text" th:field="*{image1Url}">
+
+                <label for="image2Url">Image 2 URL:</label>
+                <input id="image2Url" name="image2Url" required type="text" th:field="*{image2Url}">
+
+                <label for="image3Url">Image 3 URL:</label>
+                <input id="image3Url" name="image3Url" required type="text" th:field="*{image3Url}">
+
+                <label for="image4Url">Image 4 URL:</label>
+                <input id="image4Url" name="image4Url" required type="text" th:field="*{image4Url}">
+
+                <label for="image5Url">Image 5 URL:</label>
+                <input id="image5Url" name="image5Url" required type="text" th:field="*{image5Url}">
+
+                <button type="submit">Create Recipe</button>
+            </form>
+        </section>
+    </main>
+    <footer th:replace="~{/fragments/commons::footer}"></footer>
+</body>
+</html>

@@ -30,8 +30,6 @@ public class SignUpController {
 
     @PostMapping("/sign-up")
     public String registerUser(@Valid RegisterUserDTO registerUserDTO, BindingResult bindingResult, RedirectAttributes redirectAttributes) {
-        System.out.println();
-
         if (!registerUserDTO.getPassword().equals(registerUserDTO.getConfirmPassword())) {
             bindingResult.addError(
                     new FieldError(

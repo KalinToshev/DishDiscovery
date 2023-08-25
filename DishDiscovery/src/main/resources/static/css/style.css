@@ -389,6 +389,59 @@ MAIN
     background-color: #0056b3;
 }
 
+/* Style for the add recipe form */
+.add-recipe {
+    max-width: 800px;
+    margin: 2em auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #f8f8f8;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.add-recipe h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.add-recipe label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.add-recipe input[type="text"],
+.add-recipe input[type="url"],
+.add-recipe select,
+.add-recipe textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.add-recipe textarea {
+    resize: vertical;
+}
+
+.add-recipe button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.add-recipe button:hover {
+    background-color: #0056b3;
+}
+
 /*
 ============================
 FOOTER
