@@ -22,6 +22,4 @@ public class AddRecipeValidationMessages {
     public static final String IMAGE4_URL_NOT_BLANK_MESSAGE = "Image 4 URL cannot be blank!";
 
     public static final String IMAGE5_URL_NOT_BLANK_MESSAGE = "Image 5 URL cannot be blank!";
-
-    public static final String CREATED_AT_NOT_BLANK_MESSAGE = "Created at cannot be blank!";
 }

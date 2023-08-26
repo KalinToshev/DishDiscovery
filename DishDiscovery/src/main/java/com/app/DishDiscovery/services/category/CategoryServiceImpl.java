@@ -27,4 +27,9 @@ public class CategoryServiceImpl implements CategoryService {
                     });
         }
     }
+
+    @Override
+    public CategoryEntity getCategoryByName(String name) {
+        return categoryRepository.findByCategory(CategoryEnums.valueOf(name));
+    }
 }

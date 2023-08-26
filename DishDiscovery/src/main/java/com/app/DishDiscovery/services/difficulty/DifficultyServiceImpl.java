@@ -27,4 +27,9 @@ public class DifficultyServiceImpl implements DifficultyService {
                     });
         }
     }
+
+    @Override
+    public DifficultyEntity getDifficultyByName(String name) {
+        return difficultyRepository.findByDifficulty(DifficultyEnums.valueOf(name));
+    }
 }

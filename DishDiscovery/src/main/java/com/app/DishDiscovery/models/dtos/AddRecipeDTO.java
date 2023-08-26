@@ -45,6 +45,5 @@ public class AddRecipeDTO {
     @NotBlank(message = IMAGE5_URL_NOT_BLANK_MESSAGE)
     private String image5Url;
 
-    @NotBlank(message = CREATED_AT_NOT_BLANK_MESSAGE)
     private Date createdAt = new Date();
 }

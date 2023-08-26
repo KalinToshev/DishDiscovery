@@ -442,6 +442,11 @@ MAIN
     background-color: #0056b3;
 }
 
+.error-addRecipe-message {
+    color: red;
+    margin: 10px 0;
+}
+
 /*
 ============================
 FOOTER
