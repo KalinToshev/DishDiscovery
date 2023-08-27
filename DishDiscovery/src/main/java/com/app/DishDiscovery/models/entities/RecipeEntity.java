@@ -18,7 +18,7 @@ public class RecipeEntity extends BaseEntity {
     @Column(name = "title", nullable = false)
     private String title;
 
-    @Column(name = "description", nullable = false, length = 500)
+    @Column(name = "description", nullable = false, length = 3500)
     private String description;
 
     @ManyToOne(cascade = CascadeType.MERGE, optional = false)

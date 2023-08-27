@@ -21,7 +21,7 @@ public class AddRecipeDTO {
     private String title;
 
     @NotBlank(message = DESCRIPTION_NOT_BLANK_MESSAGE)
-    @Size(min = 10, max = 500, message = DESCRIPTION_SIZE_MESSAGE)
+    @Size(min = 10, max = 3500, message = DESCRIPTION_SIZE_MESSAGE)
     private String description;
 
     @NotBlank(message = CATEGORY_NOT_BLANK_MESSAGE)

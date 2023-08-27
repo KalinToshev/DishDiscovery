@@ -41,33 +41,20 @@
                 <h2>List Of Recipes</h2>
                 <hr style="margin-bottom: 1rem;">
                 <div class="featured-recipes-flex-container">
-                    <div class="container">
-                        <div class="recipe-card">
-                            <img src="/images/pasta-carbonara.png" alt="Featured Recipe">
-                            <h3 class="recipe-title">Delicious Pasta Carbonara</h3>
-                            <p class="recipe-description">Indulge in this creamy pasta dish that's perfect for a cozy evening.</p>
-                            <a href="/recipes/1" class="btn btn-primary">View Recipe</a>
+                    <th:block th:each="recipe : ${recipes}">
+                        <div class="container">
+                            <div class="recipe-card">
+                                <img th:src="${recipe.image1Url}" alt="Recipe">
+                                <h3 class="recipe-title" th:text="${recipe.title}"></h3>
+                                <p class="recipe-description" th:text="${recipe.description}"></p>
+                                <a th:href="@{/recipes/{id}(id=${recipe.id})}" class="btn btn-primary">View Recipe</a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="container">
-                        <div class="recipe-card">
-                            <img src="/images/pasta-carbonara.png" alt="Featured Recipe">
-                            <h3 class="recipe-title">Delicious Pasta Carbonara</h3>
-                            <p class="recipe-description">Indulge in this creamy pasta dish that's perfect for a cozy evening.</p>
-                            <a href="/recipes/1" class="btn btn-primary">View Recipe</a>
-                        </div>
-                    </div>
-                    <div class="container">
-                        <div class="recipe-card">
-                            <img src="/images/pasta-carbonara.png" alt="Featured Recipe">
-                            <h3 class="recipe-title">Delicious Pasta Carbonara</h3>
-                            <p class="recipe-description">Indulge in this creamy pasta dish that's perfect for a cozy evening.</p>
-                            <a href="/recipes/1" class="btn btn-primary">View Recipe</a>
-                        </div>
-                    </div>
+                    </th:block>
                 </div>
             </div>
         </section>
+
     </main>
     <footer th:replace="~{/fragments/commons::footer}"></footer>
 </body>

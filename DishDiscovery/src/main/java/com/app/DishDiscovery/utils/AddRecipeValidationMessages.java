@@ -7,7 +7,7 @@ public class AddRecipeValidationMessages {
 
     public static final String DESCRIPTION_NOT_BLANK_MESSAGE = "Description cannot be blank!";
 
-    public static final String DESCRIPTION_SIZE_MESSAGE = "Description must be between 10 and 500 characters!";
+    public static final String DESCRIPTION_SIZE_MESSAGE = "Description must be between 10 and 3500 characters!";
 
     public static final String CATEGORY_NOT_BLANK_MESSAGE = "Category cannot be blank!";
 
