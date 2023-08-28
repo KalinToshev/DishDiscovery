@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
+<head th:replace="~{/fragments/commons::head}"></head>
+<body>
+  <nav th:replace="~{/fragments/commons::nav#user-nav}"></nav>
+  <main>
+    <h2>User Information</h2>
+    <hr>
+    <form th:action="@{/profile}" th:method="POST" th:object="${currentUserInfo}">
+      <label for="username">
+        Username:
+        <input type="text" id="username" name="username" th:value="*{username}">
+      </label>
+      <label for="fullName">
+        Full Name:
+        <input type="text" id="fullName" name="fullName" th:value="*{fullName}">
+      </label>
+      <label for="email">
+        Email:
+        <input type="text" id="email" name="email" th:value="*{email}">
+      </label>
+      <input type="submit" value="Save">
+    </form>
+  </main>
+  <footer th:replace="~{/fragments/commons::footer}"></footer>
+</body>
+</html>

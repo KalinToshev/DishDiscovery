@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.util.HashSet;
+import java.util.LinkedHashSet;
 import java.util.Set;
 
 @AllArgsConstructor
@@ -38,5 +39,18 @@ public class UserEntity extends BaseEntity {
 
     public void addRole(RoleEntity role) {
         this.roles.add(role);
+    }
+
+    @OneToMany(fetch = FetchType.EAGER, mappedBy = "author", cascade = CascadeType.ALL, orphanRemoval = true)
+    private Set<RecipeEntity> recipes = new LinkedHashSet<>();
+
+    public void addRecipe(RecipeEntity recipe) {
+        recipes.add(recipe);
+        recipe.setAuthor(this);
+    }
+
+    public void removeRecipe(RecipeEntity recipe) {
+        recipes.remove(recipe);
+        recipe.setAuthor(null);
     }
 }

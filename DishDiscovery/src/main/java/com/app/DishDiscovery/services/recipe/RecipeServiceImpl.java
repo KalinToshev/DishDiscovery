@@ -3,11 +3,15 @@ package com.app.DishDiscovery.services.recipe;
 import com.app.DishDiscovery.models.dtos.AddRecipeDTO;
 import com.app.DishDiscovery.models.dtos.RecipeCardDTO;
 import com.app.DishDiscovery.models.entities.RecipeEntity;
+import com.app.DishDiscovery.models.entities.UserEntity;
 import com.app.DishDiscovery.repositories.RecipeRepository;
 import com.app.DishDiscovery.services.category.CategoryService;
 import com.app.DishDiscovery.services.difficulty.DifficultyService;
+import com.app.DishDiscovery.services.user.UserService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -23,12 +27,15 @@ public class RecipeServiceImpl implements RecipeService {
 
     private final DifficultyService difficultyService;
 
+    private final UserService userService;
+
     @Autowired
-    public RecipeServiceImpl(RecipeRepository recipeRepository, ModelMapper modelMapper, CategoryService categoryService, DifficultyService difficultyService) {
+    public RecipeServiceImpl(RecipeRepository recipeRepository, ModelMapper modelMapper, CategoryService categoryService, DifficultyService difficultyService, UserService userService) {
         this.recipeRepository = recipeRepository;
         this.modelMapper = modelMapper;
         this.categoryService = categoryService;
         this.difficultyService = difficultyService;
+        this.userService = userService;
     }
 
     @Override
@@ -40,6 +47,12 @@ public class RecipeServiceImpl implements RecipeService {
         recipeEntity.setCategory(categoryService.getCategoryByName(addRecipeDTO.getCategory()));
 
         recipeEntity.setDifficulty(difficultyService.getDifficultyByName(addRecipeDTO.getDifficulty()));
+
+        UserDetails userDetails = (UserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+
+        UserEntity user = userService.getUserEntityByUsername(userDetails.getUsername());
+
+        user.addRecipe(recipeEntity);
 
         recipeRepository.save(recipeEntity);
     }

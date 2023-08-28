@@ -48,4 +48,8 @@ public class RecipeEntity extends BaseEntity {
     @Column(name = "created_at", nullable = false)
     private Date createdAt = new Date();
 
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "author_id")
+    private UserEntity author;
+
 }
