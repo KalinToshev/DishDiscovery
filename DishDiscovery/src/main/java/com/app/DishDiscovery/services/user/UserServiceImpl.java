@@ -1,6 +1,8 @@
 package com.app.DishDiscovery.services.user;
 
 import com.app.DishDiscovery.models.dtos.RegisterUserDTO;
+import com.app.DishDiscovery.models.dtos.ShowUserDataForProfilePageDTO;
+import com.app.DishDiscovery.models.dtos.UpdateUserDataFromProfilePageDTO;
 import com.app.DishDiscovery.models.entities.RoleEntity;
 import com.app.DishDiscovery.models.entities.UserEntity;
 import com.app.DishDiscovery.models.enums.RoleEnums;
@@ -55,5 +57,28 @@ public class UserServiceImpl implements UserService {
     @Override
     public UserEntity getUserEntityByUsername(String username) {
         return userRepository.findByUsername(username);
+    }
+
+    @Override
+    public ShowUserDataForProfilePageDTO showUserInfoForProfilePage() {
+        ShowUserDataForProfilePageDTO showUserDataForProfilePageDTO = new ShowUserDataForProfilePageDTO();
+
+        String username = SecurityContextHolder.getContext().getAuthentication().getName();
+
+        UserEntity userEntityByUsername = getUserEntityByUsername(username);
+
+        modelMapper.map(userEntityByUsername, showUserDataForProfilePageDTO);
+
+        return showUserDataForProfilePageDTO;
+    }
+
+    @Override
+    public void updateUser(UpdateUserDataFromProfilePageDTO updateUserDataFromProfilePageDTO) {
+        UserEntity userEntityByUsername = getUserEntityByUsername(updateUserDataFromProfilePageDTO.getUsername());
+
+        userEntityByUsername.setFullName(updateUserDataFromProfilePageDTO.getFullName());
+        userEntityByUsername.setEmail(updateUserDataFromProfilePageDTO.getEmail());
+
+        userRepository.save(userEntityByUsername);
     }
 }
