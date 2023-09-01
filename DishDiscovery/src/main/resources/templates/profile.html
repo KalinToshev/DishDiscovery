@@ -14,6 +14,28 @@
         <button type="submit">Save</button>
       </form>
     </section>
+    <section id="userRecipes">
+      <h2 style="text-align: center">Personal Recipe Collection</h2>
+      <hr>
+      <section class="featured-recipes">
+        <div class="container">
+          <div class="featured-recipes-flex-container">
+            <th:block th:each="recipe : ${personalRecipes}">
+              <div class="container">
+                <div class="recipe-card">
+                  <img th:src="${recipe.image1Url}" alt="Recipe">
+                  <h3 class="recipe-title" th:text="${recipe.title}"></h3>
+                  <a th:href="@{/recipes/{id}(id=${recipe.id})}" class="btn btn-primary" style="margin-bottom: 1em">View Recipe</a>
+                  <form th:action="@{/recipes/delete/{id}(id=${recipe.id})}" method="post">
+                    <button type="submit" class="btn btn-primary">Delete Recipe</button>
+                  </form>
+                </div>
+              </div>
+            </th:block>
+          </div>
+        </div>
+      </section>
+    </section>
   </main>
   <footer th:replace="~{/fragments/commons::footer}"></footer>
 </body>

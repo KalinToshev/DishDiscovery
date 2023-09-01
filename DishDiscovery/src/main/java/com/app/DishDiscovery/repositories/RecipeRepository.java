@@ -6,9 +6,12 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
+import java.util.Optional;
 
 @Repository
 public interface RecipeRepository extends JpaRepository<RecipeEntity, Long> {
+    List<RecipeEntity> findByAuthor_Id(Long id);
+
     @Query("select r from RecipeEntity r")
     List<RecipeEntity> findAll();
 }

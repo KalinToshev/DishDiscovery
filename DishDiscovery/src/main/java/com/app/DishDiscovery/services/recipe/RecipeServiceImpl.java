@@ -2,6 +2,7 @@ package com.app.DishDiscovery.services.recipe;
 
 import com.app.DishDiscovery.models.dtos.AddRecipeDTO;
 import com.app.DishDiscovery.models.dtos.RecipeCardDTO;
+import com.app.DishDiscovery.models.dtos.ShowCurrentUserRecipeCardDTO;
 import com.app.DishDiscovery.models.entities.RecipeEntity;
 import com.app.DishDiscovery.models.entities.UserEntity;
 import com.app.DishDiscovery.repositories.RecipeRepository;
@@ -16,6 +17,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class RecipeServiceImpl implements RecipeService {
@@ -77,5 +79,35 @@ public class RecipeServiceImpl implements RecipeService {
         });
 
         return recipeCardDTOS;
+    }
+
+    @Override
+    public List<ShowCurrentUserRecipeCardDTO> getAllPersonalRecipes() {
+        List<ShowCurrentUserRecipeCardDTO> showCurrentUserRecipeCardDTOS = new ArrayList<>();
+
+        String username = SecurityContextHolder.getContext().getAuthentication().getName();
+
+        UserEntity userEntityByUsername = userService.getUserEntityByUsername(username);
+
+        Long id = userEntityByUsername.getId();
+
+        List<RecipeEntity> byAuthorId = recipeRepository.findByAuthor_Id(id);
+
+        byAuthorId.forEach(recipe -> {
+            ShowCurrentUserRecipeCardDTO showCurrentUserRecipeCardDTO = new ShowCurrentUserRecipeCardDTO();
+
+            modelMapper.map(recipe, showCurrentUserRecipeCardDTO);
+
+            showCurrentUserRecipeCardDTOS.add(showCurrentUserRecipeCardDTO);
+        });
+
+        return showCurrentUserRecipeCardDTOS;
+    }
+
+    @Override
+    public void deleteRecipe(Long id) {
+        RecipeEntity recipeEntity = recipeRepository.findById(id).get();
+
+        recipeRepository.delete(recipeEntity);
     }
 }
