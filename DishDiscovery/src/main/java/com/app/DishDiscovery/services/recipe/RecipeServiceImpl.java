@@ -103,11 +103,4 @@ public class RecipeServiceImpl implements RecipeService {
 
         return showCurrentUserRecipeCardDTOS;
     }
-
-    @Override
-    public void deleteRecipe(Long id) {
-        RecipeEntity recipeEntity = recipeRepository.findById(id).get();
-
-        recipeRepository.delete(recipeEntity);
-    }
 }

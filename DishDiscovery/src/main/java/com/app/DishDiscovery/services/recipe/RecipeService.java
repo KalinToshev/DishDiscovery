@@ -12,6 +12,4 @@ public interface RecipeService {
     List<RecipeCardDTO> getAllRecipes();
 
     List<ShowCurrentUserRecipeCardDTO> getAllPersonalRecipes();
-
-    void deleteRecipe(Long id);
 }

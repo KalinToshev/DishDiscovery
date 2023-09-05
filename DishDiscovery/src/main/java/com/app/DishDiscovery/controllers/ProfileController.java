@@ -35,13 +35,6 @@ public class ProfileController {
         return "redirect:/profile";
     }
 
-    @PostMapping("/recipes/delete/{id}")
-    public String deletePersonalRecipe(@PathVariable("id") Long id) {
-        recipeService.deleteRecipe(id);
-
-        return "redirect:/profile";
-    }
-
     @ModelAttribute
     public UpdateUserDataFromProfilePageDTO updateUserDataFromProfilePageDTO() {
         return new UpdateUserDataFromProfilePageDTO();
