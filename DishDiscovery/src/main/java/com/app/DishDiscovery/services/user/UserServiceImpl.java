@@ -3,15 +3,16 @@ package com.app.DishDiscovery.services.user;
 import com.app.DishDiscovery.models.dtos.RegisterUserDTO;
 import com.app.DishDiscovery.models.dtos.ShowUserDataForProfilePageDTO;
 import com.app.DishDiscovery.models.dtos.UpdateUserDataFromProfilePageDTO;
+import com.app.DishDiscovery.models.entities.RecipeEntity;
 import com.app.DishDiscovery.models.entities.RoleEntity;
 import com.app.DishDiscovery.models.entities.UserEntity;
 import com.app.DishDiscovery.models.enums.RoleEnums;
 import com.app.DishDiscovery.repositories.RoleRepository;
 import com.app.DishDiscovery.repositories.UserRepository;
+import com.app.DishDiscovery.services.recipe.RecipeService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 

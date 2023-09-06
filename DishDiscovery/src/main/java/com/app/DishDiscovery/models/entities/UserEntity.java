@@ -41,7 +41,7 @@ public class UserEntity extends BaseEntity {
         this.roles.add(role);
     }
 
-    @OneToMany(fetch = FetchType.EAGER, mappedBy = "author", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(fetch = FetchType.EAGER, mappedBy = "author", cascade = CascadeType.MERGE, orphanRemoval = true)
     private Set<RecipeEntity> recipes = new LinkedHashSet<>();
 
     public void addRecipe(RecipeEntity recipe) {

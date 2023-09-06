@@ -12,6 +12,9 @@ import java.util.Optional;
 public interface RecipeRepository extends JpaRepository<RecipeEntity, Long> {
     List<RecipeEntity> findByAuthor_Id(Long id);
 
+    @Override
+    Optional<RecipeEntity> findById(Long id);
+
     @Query("select r from RecipeEntity r")
     List<RecipeEntity> findAll();
 }
