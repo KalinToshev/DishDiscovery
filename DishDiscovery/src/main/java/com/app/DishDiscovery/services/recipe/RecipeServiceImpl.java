@@ -2,6 +2,7 @@ package com.app.DishDiscovery.services.recipe;
 
 import com.app.DishDiscovery.models.dtos.AddRecipeDTO;
 import com.app.DishDiscovery.models.dtos.RecipeCardDTO;
+import com.app.DishDiscovery.models.dtos.RecipeDTO;
 import com.app.DishDiscovery.models.dtos.ShowCurrentUserRecipeCardDTO;
 import com.app.DishDiscovery.models.entities.RecipeEntity;
 import com.app.DishDiscovery.models.entities.UserEntity;
@@ -107,5 +108,21 @@ public class RecipeServiceImpl implements RecipeService {
     @Override
     public void deleteRecipe(Long id) {
         recipeRepository.deleteById(id);
+    }
+
+    @Override
+    public RecipeEntity getRecipeById(Long id) {
+        return recipeRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("There is no recipe with this ID!"));
+    }
+
+    @Override
+    public RecipeDTO convertToDTO(RecipeEntity recipeEntity) {
+        RecipeDTO recipeDTO = new RecipeDTO();
+
+        modelMapper.map(recipeEntity, recipeDTO);
+
+        if (recipeEntity.getAuthor() != null) {recipeDTO.setAuthorName(recipeEntity.getAuthor().getFullName());}
+
+        return recipeDTO;
     }
 }
