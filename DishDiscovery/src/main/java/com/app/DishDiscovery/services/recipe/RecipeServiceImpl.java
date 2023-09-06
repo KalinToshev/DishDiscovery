@@ -103,4 +103,9 @@ public class RecipeServiceImpl implements RecipeService {
 
         return showCurrentUserRecipeCardDTOS;
     }
+
+    @Override
+    public void deleteRecipe(Long id) {
+        recipeRepository.deleteById(id);
+    }
 }
