@@ -123,6 +123,10 @@ public class RecipeServiceImpl implements RecipeService {
 
         if (recipeEntity.getAuthor() != null) {recipeDTO.setAuthorName(recipeEntity.getAuthor().getFullName());}
 
+        recipeDTO.setCategoryName(recipeEntity.getCategory().getCategory().name());
+
+        recipeDTO.setDifficultyName(recipeEntity.getDifficulty().getDifficulty().name());
+
         return recipeDTO;
     }
 }

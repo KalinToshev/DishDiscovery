@@ -47,7 +47,7 @@
                                 <img th:src="${recipe.image1Url}" alt="Recipe">
                                 <h3 class="recipe-title" th:text="${recipe.title}"></h3>
                                 <p class="recipe-description" th:text="${recipe.description}"></p>
-                                <a th:href="@{/recipes/{id}(id=${recipe.id})}" class="btn btn-primary">View Recipe</a>
+                                <a th:href="@{/recipe/{id}(id=${recipe.id})}" class="btn btn-primary">View Recipe</a>
                             </div>
                         </div>
                     </th:block>
