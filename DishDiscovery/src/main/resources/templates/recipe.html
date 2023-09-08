@@ -9,8 +9,8 @@
     <p th:text="'Category: ' + ${recipe.categoryName}"></p>
     <p th:text="'Difficulty: ' + ${recipe.difficultyName}"></p>
     <p th:text="'Author: ' + ${recipe.authorName}"></p>
-
     <!-- Gallery for images -->
+    <!--
     <div class="image-gallery">
       <img th:src="${recipe.image1Url}" alt="Image 1">
       <img th:src="${recipe.image2Url}" alt="Image 2">
@@ -18,10 +18,15 @@
       <img th:src="${recipe.image4Url}" alt="Image 4">
       <img th:src="${recipe.image5Url}" alt="Image 5">
     </div>
-  </div>
-
+    -->
     <p th:text="'Created at: ' + ${#dates.format(recipe.createdAt, 'dd-MM-yyyy HH:mm')}"></p>
   </div>
+  <section class="comments">
+    <!--Add comment-->
+    <form th:action="">
+
+    </form>
+  </section>
   <footer th:replace="~{/fragments/commons::footer}"></footer>
 </body>
 </html>

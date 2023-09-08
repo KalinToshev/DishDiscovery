@@ -3,7 +3,7 @@
 NAVIGATION
 ============================
  */
-
+/*
 nav {
     display: flex;
     justify-content: center;
@@ -58,13 +58,13 @@ nav ul li:hover form button {
 nav ul li:hover a {
     color: white;
 }
-
+*/
 /*
 ============================
 MAIN
 ============================
  */
-
+/*
 .hero {
     background-image: url('/images/hero-background.png');
     background-attachment: fixed;
@@ -117,8 +117,9 @@ MAIN
     gap: 1.8rem;
     flex-wrap: wrap;
 }
-
+*/
 /* Recipe card styles */
+/*
 .recipe-card {
     background-color: #fff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -166,8 +167,9 @@ MAIN
 .btn-primary:hover {
     background-color: #6F2DBD;
 }
-
+*/
 /* About Us section styles */
+/*
 .about-us {
     background-color: #fff;
     padding: 60px 0;
@@ -186,8 +188,9 @@ MAIN
     width: 60%;
     margin: 1em auto;
 }
-
+*/
 /* Responsive styles */
+/*
 @media screen and (max-width: 768px) {
     .container {
         padding: 0 10px;
@@ -198,8 +201,9 @@ MAIN
         width: 100%;
     }
 }
-
+*/
 /* Social Media section styles */
+/*
 .social-media {
     background-color: #EACAFF;
     padding: 60px 0;
@@ -229,8 +233,9 @@ MAIN
 .social-icon:hover {
     transform: scale(1.1);
 }
-
+*/
 /* Style for the sign-up form */
+/*
 .signup {
     text-align: center;
     padding: 60px 0;
@@ -282,14 +287,16 @@ MAIN
 .signup button:hover {
     background-color: #6F2DBD;
 }
-
+*/
 /* Optional: Style for error messages */
+/*
 .signup .error-signup-message {
     color: red;
     margin-bottom: 10px;
 }
-
+*/
 /* Style for the sign-in form */
+/*
 .signin {
     text-align: center;
     padding: 60px 0;
@@ -340,8 +347,9 @@ MAIN
 .signin button:hover {
     background-color: #0056b3;
 }
-
+*/
 /* Optional: Style for error messages */
+/*
 .error-message {
     color: red;
     margin: 10px 0;
@@ -388,8 +396,9 @@ MAIN
 #recipe-filters button:hover {
     background-color: #0056b3;
 }
-
+*/
 /* Style for the add recipe form */
+/*
 .add-recipe {
     max-width: 800px;
     margin: 2em auto;
@@ -462,8 +471,9 @@ MAIN
     margin-bottom: 20px;
     margin-top: 20px;
 }
-
+*/
 /* Style the input fields */
+/*
 #userInfo input[type="text"],
 #userInfo input[type="email"] {
     width: 100%;
@@ -472,8 +482,9 @@ MAIN
     border: 1px solid #ccc;
     border-radius: 5px;
 }
-
+*/
 /* Style the submit button */
+/*
 #userInfo button[type="submit"] {
     display: block;
     width: 100%;
@@ -484,25 +495,27 @@ MAIN
     border-radius: 5px;
     cursor: pointer;
 }
-
+*/
 /* Hover effect on the submit button */
+/*
 #userInfo button[type="submit"]:hover {
     background-color: #0056b3;
 }
-
+*/
 /* Style labels */
+/*
 #userInfo label {
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
 }
-
+*/
 /*
 ============================
 FOOTER
 ============================
  */
-
+/*
 .footer {
     background-color: #f8f8f8;
     padding: 20px 0;
@@ -520,3 +533,4 @@ FOOTER
     font-size: 14px;
     margin: 10px 0 0;
 }
+*/
