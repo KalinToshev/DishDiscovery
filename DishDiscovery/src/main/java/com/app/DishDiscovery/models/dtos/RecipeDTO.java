@@ -12,6 +12,7 @@ import java.util.Date;
 @Getter
 @Setter
 public class RecipeDTO {
+    private Long id;
     private String title;
     private String description;
     private String categoryName;

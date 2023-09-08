@@ -22,10 +22,21 @@
     <p th:text="'Created at: ' + ${#dates.format(recipe.createdAt, 'dd-MM-yyyy HH:mm')}"></p>
   </div>
   <section class="comments">
+    <h2>Add Comment</h2>
+    <hr>
     <!--Add comment-->
-    <form th:action="">
-
+    <form th:action="@{/recipe/{id}(id=${recipe.id})}" th:method="post" th:object="${addCommentDTO}">
+      <textarea name="content" id="content" cols="30" rows="10" th:field="*{content}"></textarea>
+      <button type="submit">Send</button>
     </form>
+    <h2>Comments</h2>
+    <hr>
+    <th:block th:each="comment: ${comments}">
+      <div class="comment">
+        <p th:text="${comment.content}"></p>
+        <p th:text="${comment.authorName}"></p>
+      </div>
+    </th:block>
   </section>
   <footer th:replace="~{/fragments/commons::footer}"></footer>
 </body>
